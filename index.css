@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ironman-red: #c62828;
+    --ironman-gold: #ffc107;
+    --dark-metal: #263238;
+    --light-metal: #607d8b;
+    --reactor-blue: #4fc3f7;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #eee;
+    background-color: var(--dark-metal);
+    background-image: linear-gradient(45deg, #1a1a1a 25%, #222 25%, #222 50%, #1a1a1a 50%, #1a1a1a 75%, #222 75%, #222 100%);
+    background-size: 10px 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.arc-reactor {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, var(--reactor-blue) 0%, #0288d1 60%, #01579b 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 0 15px 5px #4fc3f7, 0 0 30px 10px rgba(79, 195, 247, 0.5);
+    z-index: 100;
+}
+
+h1,
+h2 {
+    color: var(--ironman-gold);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--ironman-red);
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--ironman-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--ironman-red);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(38, 50, 56, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.5), inset 0 0 20px rgba(255, 193, 7, 0.2);
+    border: 1px solid var(--ironman-red);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--ironman-red);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.7);
+}
+
+nav img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 3px solid var(--ironman-gold);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.7);
+    transition: transform 0.3s ease;
+}
+
+nav img:hover {
+    transform: scale(1.1);
+}
+
+section {
+    background-color: rgba(38, 50, 56, 0.8);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.5), inset 0 0 20px rgba(255, 193, 7, 0.2);
+    border: 1px solid var(--ironman-red);
+    position: relative;
+    overflow: hidden;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, transparent 70%, var(--ironman-red) 70%);
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    padding: 5px 0;
+    border-bottom: 1px dotted var(--light-metal);
+}
+
+ul li strong {
+    color: var(--ironman-gold);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(38, 50, 56, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.5), inset 0 0 20px rgba(255, 193, 7, 0.2);
+    border: 1px solid var(--ironman-red);
+    position: relative;
+    margin-top: 40px;
+}
+
+.site-navigation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: var(--ironman-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: var(--dark-metal);
+    color: var(--ironman-gold);
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.8);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px 5px #4fc3f7, 0 0 30px 10px rgba(79, 195, 247, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px 8px #4fc3f7, 0 0 40px 15px rgba(79, 195, 247, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px 5px #4fc3f7, 0 0 30px 10px rgba(79, 195, 247, 0.5);
+    }
+}
+
+.arc-reactor {
+    animation: pulse 2s infinite;
+}

@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --doom-green: #1b5e20;
+    --doom-silver: #bdbdbd;
+    --dark-metal: #212121;
+    --light-metal: #616161;
+    --doom-accent: #4caf50;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #eee;
+    background-color: var(--dark-metal);
+    background-image: linear-gradient(45deg, #1a1a1a 25%, #222 25%, #222 50%, #1a1a1a 50%, #1a1a1a 75%, #222 75%, #222 100%);
+    background-size: 10px 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.doom-emblem {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, var(--doom-green) 0%, #0a3d0a 60%, #052505 100%);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 0 15px 5px rgba(27, 94, 32, 0.7), 0 0 30px 10px rgba(27, 94, 32, 0.3);
+    z-index: 100;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+h1,
+h2 {
+    color: var(--doom-silver);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--doom-green);
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--doom-silver);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--doom-green);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(33, 33, 33, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(27, 94, 32, 0.5), inset 0 0 20px rgba(189, 189, 189, 0.1);
+    border: 1px solid var(--doom-green);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--doom-green);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(27, 94, 32, 0.7);
+}
+
+nav img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 3px solid var(--doom-silver);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+    transition: transform 0.3s ease;
+}
+
+nav img:hover {
+    transform: scale(1.1);
+}
+
+section {
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(27, 94, 32, 0.5), inset 0 0 20px rgba(189, 189, 189, 0.1);
+    border: 1px solid var(--doom-green);
+    position: relative;
+    overflow: hidden;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, transparent 70%, var(--doom-green) 70%);
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    padding: 5px 0;
+    border-bottom: 1px dotted var(--light-metal);
+}
+
+ul li strong {
+    color: var(--doom-silver);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(33, 33, 33, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(27, 94, 32, 0.5), inset 0 0 20px rgba(189, 189, 189, 0.1);
+    border: 1px solid var(--doom-green);
+    position: relative;
+    margin-top: 40px;
+}
+
+.site-navigation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: var(--doom-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: var(--dark-metal);
+    color: var(--doom-silver);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px 5px rgba(27, 94, 32, 0.7), 0 0 30px 10px rgba(27, 94, 32, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px 8px rgba(27, 94, 32, 0.8), 0 0 40px 15px rgba(27, 94, 32, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 15px 5px rgba(27, 94, 32, 0.7), 0 0 30px 10px rgba(27, 94, 32, 0.3);
+    }
+}
+
+.doom-emblem {
+    animation: pulse 2s infinite;
+}
